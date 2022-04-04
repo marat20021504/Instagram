@@ -1,8 +1,14 @@
+import styled from 'styled-components'
+
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Wrapper>
+      salom
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+`
