@@ -1,9 +1,14 @@
-import styled from 'styled-components'
-
+import {Route, Routes} from "react-router-dom"
+import styled from "styled-components";
+import Login from "./containers/Login";
+import LoginPage from "./containers/LoginPage";
 function App() {
   return (
     <Wrapper>
-      salom
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
     </Wrapper>
   );
 }
@@ -11,4 +16,6 @@ function App() {
 export default App;
 
 const Wrapper = styled.div`
+  width: 375px;
+  height: 812px;
 `
