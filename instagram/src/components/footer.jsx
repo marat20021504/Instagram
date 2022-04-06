@@ -3,14 +3,25 @@ import icon2 from "../assets/icons/Icon (2).svg"
 import icon3 from "../assets/icons/Icon (3).svg"
 import icon4 from "../assets/icons/Icon (4).svg"
 import icon5 from "../assets/icons/Icon (5).svg"
+import Profil from "../assets/images/Oval-profil.png"
+import {NavLink} from "react-router-dom"
+
 
 export const Footer = () => {
     return (
         <Wrapper>
-            <img src={icon2} alt="icon2" />
+            <NavLink to={"/home"}>
+                <img src={icon2} alt="icon2" />
+            </NavLink>
             <img src={icon3} alt="icon3" />
             <img src={icon4} alt="icon4" />
-            <img src={icon5} alt="icon5" />
+            <NavLink to={"/you"}>
+                <img src={icon5} alt="icon5" />
+            </NavLink>
+
+            <NavLink to={"/profile"}>
+                <img src={Profil} alt="Profil" />
+            </NavLink>
         </Wrapper>
     )
 }
@@ -27,4 +38,6 @@ const Wrapper = styled.div`
     background: #FAFAFA;
     box-shadow: 0px -0.33px 0px #A6A6AA;
     border-top: 1px solid grey;
+
+    
 `

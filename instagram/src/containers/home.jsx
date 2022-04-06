@@ -18,6 +18,16 @@ import liked from "../assets/icons/Oval.png"
 import { Footer } from "../components/footer"
 
 export const Home = () => {
+
+    const subscribers = [
+        {img: profil, paragraph: "Your Story"},
+        {img: profil, paragraph: "Your Story"},
+        {img: profil, paragraph: "Your Story"},
+        {img: profil, paragraph: "Your Story"},
+        {img: profil, paragraph: "Your Story"},
+        {img: profil, paragraph: "Your Story"}
+    ]
+
     return (
         <Wrapper>
             <Headers>
@@ -32,43 +42,16 @@ export const Home = () => {
             </Headers>
 
             <Following>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
-                    <div className="subscribers">
-                        <img src={profil} alt="image" />
-                        <p>Your Story</p>
-                    </div>
+                {
+                    subscribers.map((data) => {
+                        return (
+                            <div className="subscribers">
+                                <img src={data.img} alt="image" />
+                                <p>{data.paragraph}</p>
+                            </div>
+                        )
+                    })
+                }
             </Following>
 
             <InfoContainer>
